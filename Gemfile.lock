@@ -219,7 +219,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (1.4.1)
-    turbolinks (1.1.1)
+    turbolinks (2.3.0)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -255,7 +255,7 @@ DEPENDENCIES
   selenium-webdriver (= 2.35.1)
   spork-rails (= 4.0.0)
   sqlite3
-  turbolinks (= 1.1.1)
+  turbolinks (~> 2.3.0)
   uglifier (= 2.1.1)
 
 BUNDLED WITH
