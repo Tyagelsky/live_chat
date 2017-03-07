@@ -6,6 +6,7 @@ gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'rake', '< 11.0'
+gem 'faker'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '3.3.2'
