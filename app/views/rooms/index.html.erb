@@ -21,7 +21,7 @@
     <tbody>
       <%= content_tag_for(:tr, @rooms) do |room| %>
             <td><%= room.name %></td>
-            <td><%= link_to 'Show', room %></td>
+          <td><%= link_to 'Show', "/rooms/"+room.name %></td>
             <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>

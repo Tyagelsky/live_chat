@@ -9,6 +9,7 @@ Rails.application.routes.draw do
  match '/signin', to: 'sessions#new', via: 'get'
  match '/signout', to: 'sessions#destroy', via: 'delete'
  match '/rooms', to: 'rooms#room', via: 'get'
+ match '/rooms/:name', to: 'rooms#show', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

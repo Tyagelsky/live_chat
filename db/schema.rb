@@ -14,12 +14,15 @@
 ActiveRecord::Schema.define(version: 20170308173357) do
 
   create_table "messages", force: :cascade do |t|
-    t.text     "body"
     t.integer  "user_id"
+    t.integer  "room_id"
+    t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "messages", ["room_id"], name: "index_messages_on_room_id"
+  add_index "messages", ["user_id", "created_at"], name: "index_messages_on_user_id_and_created_at"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
   create_table "rooms", force: :cascade do |t|

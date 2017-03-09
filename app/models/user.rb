@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :messages
-  has_many :rooms , through: :messages
+  has_many :rooms 
   before_save {  email.downcase! }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }

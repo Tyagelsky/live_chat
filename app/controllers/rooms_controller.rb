@@ -6,7 +6,8 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @messages = Message.all
+    @room = Room.find_by({name: params[:id]}) || Room.find(params[:id])
+    @messages = @room.messages
     @message = Message.new
   end
 
@@ -25,9 +26,10 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    @room = Room.find(params[:id])
     @room.destroy
     flash[:notice] = 'Room was successfully destroyed.'
-    redirect_to room_url
+    redirect_to rooms_path
   end
 
   private
