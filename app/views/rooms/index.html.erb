@@ -3,7 +3,7 @@
   <%= link_to new_room_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Room
-      <% end if user_signed_in? %>
+      <% end if signed_in? %>
   <h1>Listing rooms</h1>
 </div>
 
@@ -26,4 +26,4 @@
       <% end %>
     </tbody>
   </table>
-</div>
+      </div>

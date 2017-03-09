@@ -4,11 +4,11 @@
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_room_path(@room), class: 'btn btn-primary' do %>
+  <%= link_to edit_room_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1><%= @room.name %></h1>
+  <h1><%= @room %></h1>
 </div>
 
   <div class="table-responsive" id='chat'>
@@ -23,7 +23,7 @@
       </thead>
 
       <tbody>
-        <%= render :partial => 'message', collection: @messages %>
+        <%= render :partial => 'messages', collection: @messages %>
       </tbody>
     </table>
   </div>

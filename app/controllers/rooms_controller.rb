@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @messages = @room.messages
+    @messages = Message.all
     @message = Message.new
   end
 
@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      flash[:success] = 'Room was successfully created.'
+      flash[:notice] = 'Room was successfully created.'
       redirect_to @room
     else
       render 'new'
@@ -26,7 +26,7 @@ class RoomsController < ApplicationController
 
   def destroy
     @room.destroy
-    flash[:success] = 'Room was successfully destroyed.'
+    flash[:notice] = 'Room was successfully destroyed.'
     redirect_to room_url
   end
 
