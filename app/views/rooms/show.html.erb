@@ -7,8 +7,6 @@
   <h1><%= @room.name %></h1>
   </div>
 
-  <%= render :partial => 'messages', collection: @messages, :as => :message %>
-
   <dl class="dl-horizontal">
   <%= form_for @message do |f| %>
   <%= f.hidden_field :room_id, value: @room.id %>
@@ -16,3 +14,5 @@
   <%= f.submit 'Send', id: 'send_button' %>
   <% end %>
   </dl>
+  
+<%= render :partial => 'messages', collection: @messages, :as => :message %>

@@ -7,8 +7,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'rake', '< 11.0'
 gem 'faker'
+gem 'pg'
 group :development, :test do
-  gem 'sqlite3'
+
   gem 'rspec-rails', '3.3.2'
   gem 'guard-rspec', '4.6.0'
   gem 'spork-rails', '4.0.0'
@@ -37,6 +38,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+
   gem 'rails_12factor', '0.0.2'
 end
